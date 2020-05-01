@@ -1,0 +1,37 @@
+{
+  "name": "galasix",
+  "version": "1.0.0",
+  "description": "landing galasix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosrjg7/galasix.git"
+  },
+  "author": "carlos garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosrjg7/galasix/issues"
+  },
+  "homepage": "https://github.com/carlosrjg7/galasix#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.0"
+  }
+}
