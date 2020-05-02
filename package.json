@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/carlosrjg7/galasix/issues"
   },
-  "homepage": "https://github.com/carlosrjg7/galasix#readme",
+  "homepage": "https://github.com/carlosrjg7/galasix",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
