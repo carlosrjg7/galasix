@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-
+const browserify = require('gulp-browserify');
 
 
 const browserInit = () =>{
@@ -17,10 +17,10 @@ const browserInit = () =>{
       baseDir: './public'
     },
     port: 8080,
-    https: {
+/*    https: {
       key: "./ssl/server.key",
       cert: "./ssl/server.crt"
-  }
+  }*/
   });
 };
 
@@ -28,12 +28,14 @@ const browserReload = () => {
   browserSync.reload();
 };
 
+
 gulp.task('js', () => {
   return gulp.src('./resourse/js/**/*.js')
             .pipe(babel({       
               "presets": ["@babel/env"]
             }))    
-            .pipe(uglify())
+            .pipe(browserify())
+            //.pipe(uglify())
             .pipe(rename({
               suffix: '.min'
             }))
@@ -42,7 +44,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('sass', () =>{
-    return gulp.src('./resourse/sass/global.scss')
+    return gulp.src('./resourse/sass/*.scss')
       .pipe(sass({
         includePaths: ['./node_modules'],
       }))
