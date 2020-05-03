@@ -1,14 +1,14 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'font-awesome/scss/font-awesome';
+@import 'owl.carousel2/src/scss/owl.carousel';
 
+$fa-font-path:   "../fonts"; 
 
-// import the sections
-//header 
-@import './sections/header.scss';
+@import 'fonts';
 
 
 $h1_size : 2.5em;
-$p_size : 1em;
+$p_size : 1.2em;
 
 body{
     height: 1400px;
@@ -16,23 +16,47 @@ body{
     font-size: 16px;
 }
 
+h1,h2,h3,h4{
+    font-family: 'montserratbold';
+}
+
+p{
+    font-family: 'baloo_regular';
+}
+
+button{
+    font-family: 'montserratbold';
+}
+
+a{
+    font-family: 'montserratbold';
+}
+
+form{
+    font-family: 'montserratregular'; 
+}
+
 .section_home{
     background-image: url('../img/bgm_home.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 700px;
     position: relative;
     overflow: hidden;
+    margin-top: -20px;
     padding: 0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &_text{
-        padding: 2em;
+        margin-top: -6em;
+        padding: 1em 2.5em;
         color: white;
 
         p{
-            font{
-                size: $p_size;
-            }
-            line-height: 1;
+            font-size: $p_size;
+            line-height: 1.2;
+            text-align: center;
         }
         
         h1{
@@ -48,8 +72,80 @@ body{
 
     &_totem{
         position: absolute;
-        bottom: 3em;
+        bottom: 2em;
         right: 0;
         width: 10em;
+    }
+
+    &_boton{
+        position: absolute;
+        bottom: 6em;
+        left: 2em;
+    }
+    
+    &_icon{
+        position: absolute;
+        bottom: 0.2em;
+        color: #fff;
+        left: 49%;
+        display: block;
+        font-size: 2em;
+    }
+}
+
+.section_services{
+    padding: 5em 2em;
+    height: 700px;
+    overflow: hidden;
+    background-image: url('../img/bg_m_left.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: -30%;
+    &_text{
+        h2{
+            text-align: center;
+        }
+    }
+
+    .cards_block{
+        margin-bottom: 2em;
+        margin-top: 2rem;
+    }
+
+    &_card{
+        padding: 2em 2.5em;
+        min-height: 6em;
+        background-color: #262626;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        .gicons{
+            width: 60px;
+            height: 50px;
+            margin-right: 1.5em;
+            background-image: url('../img/Gicons.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            zoom: 0.8;
+            
+            &._1{
+                background-position: 49%;
+            } 
+            
+            &._2{
+                background-position: 0%;
+            }
+
+            &._3{
+                background-position: 100%;
+            }
+        }
+        h4{
+            color: white;
+            text-align: left;
+            margin:0;
+            font-size: 1.2em;
+        }
     }
 }

@@ -28,14 +28,24 @@ const browserReload = () => {
   browserSync.reload();
 };
 
+gulp.task('awesome', () => {
+  return gulp.src('./node_modules/font-awesome/fonts/**/*.*')
+  .pipe(gulp.dest('./public/fonts/'))
+});
+
+const fuentes = ['./resourse/fonts/**/*.{woff,woff2}'];
+gulp.task('copyFonts', ()=>{
+  return gulp.src(fuentes)
+  .pipe(gulp.dest('./public/fonts'))
+});
 
 gulp.task('js', () => {
   return gulp.src('./resourse/js/**/*.js')
             .pipe(babel({       
               "presets": ["@babel/env"]
-            }))    
+            }))  
             .pipe(browserify())
-            //.pipe(uglify())
+            .pipe(uglify())
             .pipe(rename({
               suffix: '.min'
             }))
@@ -44,7 +54,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('sass', () =>{
-    return gulp.src('./resourse/sass/*.scss')
+    return gulp.src('./resourse/sass/styles.scss')
       .pipe(sass({
         includePaths: ['./node_modules'],
       }))
