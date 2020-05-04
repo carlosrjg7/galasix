@@ -11,7 +11,7 @@ $h1_size : 2.5em;
 $p_size : 1.2em;
 
 body{
-    height: 1400px;
+    height: auto;
     width: 100%;
     font-size: 16px;
 }
@@ -40,10 +40,9 @@ form{
     background-image: url('../img/bgm_home.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: calc(100vh - 50px);
     position: relative;
     overflow: hidden;
-    margin-top: -20px;
     padding: 0px !important;
     display: flex;
     align-items: center;
@@ -95,12 +94,10 @@ form{
 
 .section_services{
     padding: 5em 2em;
-    height: 700px;
+    //height:  calc(100vh - 59px);
+    height: auto;
     overflow: hidden;
-    background-image: url('../img/bg_m_left.svg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: -30%;
+    background-color: #c6c6c6;
     &_text{
         h2{
             text-align: center;
@@ -148,4 +145,108 @@ form{
             font-size: 1.2em;
         }
     }
+}
+
+.section_why{
+    padding: 4em 2em;
+    height: auto;
+    overflow: hidden;
+
+    h2{
+        text-align: center;
+    }
+
+    .imgInfo{
+        width: 100%;
+        margin-top: 2em;
+        img{
+            width: 50vw;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .textInfo{
+        margin-top: 2em;
+
+        h3{
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        p{
+            text-align: justify;
+        }
+        
+    }
+}
+
+
+.section_team{
+    padding: 5em 0em;
+    height:  calc(100vh - 59px);
+    //height: auto;
+    overflow: hidden;
+    background-color: #fff;
+    background-image: url('../img/bg_m_team.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carrusel{
+        width: 100%;
+        .section_team_card{
+            background-color: #c6c6c6;
+            padding: 1.5em;
+            border-radius: 10px;
+
+            img{
+                width: 100px;
+                height: 100px;
+                background-color: #262626;
+                border-radius: 50%;
+                margin: 1em auto;
+            }
+
+            h4{
+                font-size: 1em;
+                text-align: center;
+            }
+
+            p{
+                margin: 0;
+                line-height: 1;
+                font-size: 0.8em;
+                text-align: justify;
+            }
+
+        }
+
+    }
+}
+
+#owl-demo {
+    margin-top: 100px;
+  }
+  
+  .item {
+    height: 300px;
+    width: 100%;
+    background: red;
+  }
+
+.owl-carousel .owl-stage-outer {
+    overflow: inherit !important;
+}
+
+.owl-carousel .owl-item.active.center{
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item{
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out;
 }

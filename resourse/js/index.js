@@ -9,6 +9,30 @@ $(document).ready(function(){
     console.log('hola Jquery home');
 });
 
+
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel();
-  });
+    
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:60,
+    nav:false,
+    dots: true,
+    center: true,
+    autoplay: true,
+    touchDrag:true,
+    responsive:{
+        0:{
+            items:1.5
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+
+});
+
