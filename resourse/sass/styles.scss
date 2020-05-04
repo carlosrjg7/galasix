@@ -14,6 +14,18 @@ body{
     height: auto;
     width: 100%;
     font-size: 16px;
+    scroll-behavior: smooth !important;
+}
+
+.hamb{
+    color: #5f1791 !important;
+}
+
+.navbar-toggler.navbar-toggler-left{
+    border-color: transparent !important;
+    &:focus{
+        outline: none;
+    }
 }
 
 h1,h2,h3,h4{
@@ -80,6 +92,11 @@ form{
         position: absolute;
         bottom: 6em;
         left: 2em;
+        button{
+            border: 1px solid white;
+            background: rgb(51,51,255);
+            background: linear-gradient(90deg, rgba(51,51,255,1) 0%, rgba(43,190,242,1) 100%);
+        }
     }
     
     &_icon{
@@ -93,11 +110,22 @@ form{
 }
 
 .section_services{
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%; height: 100%;
+        background-image: url('../img/bg_m_acuados.svg');
+        filter: contrast(85%);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
     padding: 5em 2em;
     //height:  calc(100vh - 59px);
     height: auto;
     overflow: hidden;
-    background-color: #c6c6c6;
     &_text{
         h2{
             text-align: center;
@@ -112,11 +140,26 @@ form{
     &_card{
         padding: 2em 2.5em;
         min-height: 6em;
-        background-color: #262626;
         margin-bottom: 2em;
         display: flex;
         align-items: center;
         border-radius: 10px;
+
+        &._1{
+            background: rgb(95,23,145);
+            background: linear-gradient(90deg, rgba(95,23,145,1) 0%, rgba(178,35,211,1) 100%);
+        }
+
+        &._2{
+            background: rgb(51,51,255);
+            background: linear-gradient(90deg, rgba(51,51,255,1) 0%, rgba(43,190,242,1) 100%);
+        }
+
+        &._3{
+            background: rgb(181,42,135);
+            background: linear-gradient(90deg, rgba(181,42,135,1) 0%, rgba(255,102,153,1) 100%);
+        }
+
         .gicons{
             width: 60px;
             height: 50px;
@@ -151,7 +194,17 @@ form{
     padding: 4em 2em;
     height: auto;
     overflow: hidden;
-
+    &::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        width: 110%;
+        height: 240%;
+        background-image: url('../img/bg_m_acuaun.svg');
+        filter: contrast(80%);
+        background-repeat: repeat;
+        background-size: cover;
+      }
     h2{
         text-align: center;
     }
@@ -293,11 +346,13 @@ form{
         button{
             margin: 1.5em auto 0em;
             display: block;
-            background-color: #262626;
+            background: rgb(51,51,255);
+            background: linear-gradient(90deg, rgba(51,51,255,1) 0%, rgba(43,190,242,1) 100%);
             border: 0px;
             padding: 0.5em 1.5em;
             border-radius: 5px;
             color:white;
+            border: 1px solid white;
         }
     }
 
@@ -353,17 +408,17 @@ form{
 .owl-carousel .owl-item.active.center{
     transform: scale(1.2);
     opacity: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .owl-carousel .owl-item{
     transform: scale(0.9);
     opacity: 0.4;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .owl-carousel .owl-item.cloned{ 
     transform: scale(0.9);
     opacity: 0.4;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }

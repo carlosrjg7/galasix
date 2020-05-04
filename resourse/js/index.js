@@ -3,14 +3,20 @@ const $ = global.jQuery = require('jquery');
 const popper = require('popper.js');  
 const bootstrap = require('bootstrap');
 const owl = require('owl.carousel2');
+const SmoothScroll = require('smooth-scroll/dist/smooth-scroll.polyfills');
 
 
 $(document).ready(function(){
-    console.log('hola Jquery home');
-});
 
+    $('.nav-item.nav-link').on('click', ()=>{
+        console.log('remove');
+        $('.navbar-collapse').removeClass('show');
+    });
 
-$(document).ready(function(){
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+        speedAsDuration: true
+    });
 
   $('.owl-carousel').owlCarousel({
     loop:true,
@@ -18,7 +24,7 @@ $(document).ready(function(){
     nav:false,
     dots: true,
     center: true,
-    autoplay: false,
+    autoplay: true,
     touchDrag:true,
     responsive:{
         0:{
