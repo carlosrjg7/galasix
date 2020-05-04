@@ -24,7 +24,7 @@ $(document).ready(function(){
     nav:false,
     dots: true,
     center: true,
-    autoplay: true,
+    autoplay: [0.6,0.6],
     touchDrag:true,
     responsive:{
         0:{
