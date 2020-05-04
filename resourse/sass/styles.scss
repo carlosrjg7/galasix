@@ -198,16 +198,17 @@ form{
     .carrusel{
         width: 100%;
         .section_team_card{
-            background-color: #c6c6c6;
-            padding: 1.5em;
+            background-color: rgba($color: #c6c6c6, $alpha: 1);
+            padding: 1em;
             border-radius: 10px;
 
-            img{
-                width: 100px;
-                height: 100px;
-                background-color: #262626;
+            .img{
+                width: 80px;
+                height: 80px;
+                background-image: url('../img/foto-perfil.jpg');
+                background-size: cover;
                 border-radius: 50%;
-                margin: 1em auto;
+                margin: 0.5em auto;
             }
 
             h4{
@@ -227,6 +228,114 @@ form{
     }
 }
 
+.section_m_contact{
+    padding: 4em 2em;
+    min-height:  calc(100vh - 59px);
+    overflow: hidden;
+    background-image: url('../img/bg_m_contact.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+    position: relative;
+    &_text{
+        
+        h2{
+            text-align: center;
+            color: white;
+        }
+
+        p{
+            color: white;
+            text-align: center;
+            line-height: 1;
+        }
+    }
+
+    &_form{
+        margin: 2em auto;
+        padding: 2em;
+        background-color: #c6c6c610;
+        border-radius: 10px;
+        border: 1px solid white;
+        input{
+            width: 100%;
+            margin-bottom: 1em;
+            &:focus{
+                border: 1px solid white;
+                box-shadow: white;
+                outline: violet !important;
+                font-weight: bold;
+            }
+        }
+
+        textarea{
+            width: 100%;
+            height: 6em;
+            &:focus{
+                box-shadow: violet;
+                outline: violet !important;
+                border: 1px solid;
+                font-weight: bold;
+            }
+        }
+
+        textarea,input{
+            background-color: #e6e6e640;
+            border: 0;
+            color: white;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        button{
+            margin: 1.5em auto 0em;
+            display: block;
+            background-color: #262626;
+            border: 0px;
+            padding: 0.5em 1.5em;
+            border-radius: 5px;
+            color:white;
+        }
+    }
+
+    &_redes{
+        display: flex;
+        justify-content: center;
+        a{  margin: 1em;
+            color: white !important;
+            i{
+                font-size: 2.5em;
+            }
+        }
+
+        &_copy{
+            position: absolute;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            bottom: 1em;
+        }
+
+        &_goHome{
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+            color: white;
+            font-size: 1em;
+            a{  
+                font-size: 0.8em;
+                color: white;
+            }
+            
+            
+        }
+    }
+}
+
 #owl-demo {
     margin-top: 100px;
   }
@@ -243,10 +352,18 @@ form{
 
 .owl-carousel .owl-item.active.center{
     transform: scale(1.2);
+    opacity: 1;
     transition: 0.3s ease-in-out;
 }
 
 .owl-carousel .owl-item{
     transform: scale(0.9);
+    opacity: 0.4;
+    transition: 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.cloned{ 
+    transform: scale(0.9);
+    opacity: 0.4;
     transition: 0.3s ease-in-out;
 }

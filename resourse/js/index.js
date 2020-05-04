@@ -11,19 +11,18 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    
 
   $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:60,
+    margin:50,
     nav:false,
     dots: true,
     center: true,
-    autoplay: true,
+    autoplay: false,
     touchDrag:true,
     responsive:{
         0:{
-            items:1.5
+            items:1.6
         },
         600:{
             items:3
